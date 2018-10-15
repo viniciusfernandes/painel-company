@@ -16,9 +16,9 @@
       <table class="table ">
           <tbody>
             <tr *ngFor="let a of andares" >
-              <td><button *ngIf="a[0]" (click)="movimentar(a[0])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[0]}}</button></td>
-              <td><button *ngIf="a[1]==0 || a[1]!=0 " (click)="movimentar(a[1])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[1]}}</button></td>
-              <td><button *ngIf="a[2]" (click)="movimentar(a[2])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[2]}}</button></td>
+              <td><button *ngIf="a[0]!==undefined" (click)="movimentar(a[0])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[0]}}</button></td>
+              <td><button *ngIf="a[1]!==undefined" (click)="movimentar(a[1])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[1]}}</button></td>
+              <td><button *ngIf="a[2]!==undefined" (click)="movimentar(a[2])" class="btn btn-primary" style="text-align: center; width: 100%">{{a[2]}}</button></td>
             </tr>
           </tbody>
         </table>
@@ -28,7 +28,7 @@
             <div class="col-sm-3" >
               <input [(ngModel)]="peso" type="text" class="form-control" placeholder="Peso embarque(kg)" /> 
             </div>
-            <div class="col-sm-3" >
+            <div class="col-sm-3">
                 <input [(ngModel)]="indice" type="text" class="form-control" placeholder="Item Desembarque" /> 
             </div>
         </div>
